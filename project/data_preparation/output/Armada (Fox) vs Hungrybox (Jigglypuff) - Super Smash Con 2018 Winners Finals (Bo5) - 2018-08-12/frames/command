@@ -1,0 +1,1 @@
+ffmpeg -i 'Armada (Fox) vs Hungrybox (Jigglypuff) - Super Smash Con 2018 Winners Finals (Bo5) - 2018-08-12.mp4' -vf fps=1 'output/Armada (Fox) vs Hungrybox (Jigglypuff) - Super Smash Con 2018 Winners Finals (Bo5) - 2018-08-12/frames/frame-%06d.png' -hide_banner
