@@ -1,5 +1,4 @@
-output/
 *.mp4
 *.mkv
 *.avi
-
+*.json
