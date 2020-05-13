@@ -104,3 +104,6 @@ venv.bak/
 
 # dsstore
 .DS_STORE
+
+# Data folder
+data/
