@@ -32,13 +32,13 @@ class VAE(Model):
         datagen = datagen or ImageDataGenerator()
         train_generator = datagen.flow(X_train, batch_size=batch_size)
         
-        n_steps = n_steps or len(X_train) // batch_size
+        n_steps = n_steps or int(math.ceil(len(X_train) / batch_size))
         for epoch in range(num_epochs):
             for step in range(n_steps):
                 X_batch = next(train_generator)
                 train_history = format_history(self.train_step(X_batch[None, :]))
                 if verbose >= 2:
-                    if step % (n_steps // 5) == 0:
+                    if step % int(math.ceil(n_steps / 5)) == 0:
                         print('.', end='')
 
             test_history = format_history(self.test_step(X_test[None, :]))

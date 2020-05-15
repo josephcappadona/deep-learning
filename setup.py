@@ -32,6 +32,7 @@ setup(
         'matplotlib',
         'munch',
         'jupyter',
+        'Pillow',
     ],
     extras_require={
         'dev': ['check-manifest'],
