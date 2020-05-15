@@ -6,6 +6,9 @@ from tensorflow.keras.layers import (
     Conv2D,
     Conv2DTranspose,
     MaxPooling2D,
+    ZeroPadding2D,
+    LeakyReLU,
+    ReLU,
     BatchNormalization,
     Flatten,
     AveragePooling2D,
@@ -14,7 +17,10 @@ from tensorflow.keras.layers import (
     Dense,
     Flatten,
     Layer,
-    Reshape
+    Reshape,
+    Dropout,
+    Activation,
+    Cropping2D,
 )
 from tensorflow.keras.regularizers import l1
 from tensorflow.keras.optimizers import Adam

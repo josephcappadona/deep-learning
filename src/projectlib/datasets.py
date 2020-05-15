@@ -30,6 +30,7 @@ class Dataset(ABC):
 # MNIST
 class MNIST(Dataset):
     n_classes = 10
+    input_shape = (28, 28, 1)
 
     @staticmethod
     def get_X_y():
@@ -44,6 +45,7 @@ mnist = MNIST()
 # CIFAR-10
 class CIFAR10(Dataset):
     n_classes = 10
+    input_shape = (32, 32, 3)
 
     @staticmethod
     def get_X_y():
@@ -57,6 +59,7 @@ cifar10 = CIFAR10()
 # CIFAR-100
 class CIFAR100(Dataset):
     n_classes = 100
+    input_shape = (32, 32, 3)
     
     @staticmethod
     def get_X_y():
@@ -65,3 +68,18 @@ class CIFAR100(Dataset):
         y = np.concatenate((y_train, y_test))
         return X, y
 cifar100 = CIFAR100()
+
+
+# Fashion MNIST
+class FashionMNIST(Dataset):
+    n_classes = 10
+    input_shape = (28, 28, 1)
+
+    @staticmethod
+    def get_X_y():
+        (X_train, y_train), (X_test, y_test) = tf.keras.datasets.fashion_mnist.load_data()
+        X = np.concatenate((X_train, X_test)).astype('float32') / 255
+        X = np.reshape(X, (len(X), 28, 28, 1))
+        y = np.concatenate((y_train, y_test))
+        return X, y
+fashion_mnist = FashionMNIST()
