@@ -36,6 +36,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 import random
+import youtube_dl
 
 from pathlib import Path
 from os import listdir

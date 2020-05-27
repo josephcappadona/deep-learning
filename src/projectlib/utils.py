@@ -47,7 +47,7 @@ def get_random_bbox(im):
 
 def crop(im, x_min, x_max, y_min, y_max):
     im = im[:]
-    return im[y_min:y_max, x_min:x_max]
+    return im[y_min:y_max+1, x_min:x_max+1]
 
 def sample_frames_from_video(video, k, technique='random', preprocess=None):
     if isinstance(video, str):
