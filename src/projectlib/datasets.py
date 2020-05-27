@@ -83,3 +83,12 @@ class FashionMNIST(Dataset):
         y = np.concatenate((y_train, y_test))
         return X, y
 fashion_mnist = FashionMNIST()
+
+# Melee Stages
+class MeleeStages(Dataset):
+    n_classes = 4
+    input_shape = (32, 32, 1)
+
+    @staticmethod
+    def get_X_y():
+        pass
