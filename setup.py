@@ -33,6 +33,7 @@ setup(
         'munch',
         'jupyter',
         'Pillow',
+        'youtube-dl',
     ],
     extras_require={
         'dev': ['check-manifest'],
