@@ -70,7 +70,7 @@ PyQt5==5.14.2
 PyQt5-sip==12.7.2
 pyrsistent==0.16.0
 python-dateutil==2.8.1
-PyYAML==5.3.1
+PyYAML==5.4
 pyzmq==19.0.1
 qtconsole==4.7.3
 QtPy==1.9.0
